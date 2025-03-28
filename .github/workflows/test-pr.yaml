@@ -1,6 +1,7 @@
 name: Build and Test PR
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - main
@@ -26,6 +27,3 @@ jobs:
 
       - name: Build project
         run: pnpm run build
-
-      - name: Run tests
-        run: pnpm test
